@@ -1,5 +1,5 @@
-import VibbeCoins from "@/assets/Vibbe Coins.png";
-import VibbeWhite from "@/assets/Vibbe White text logo 1.png";
+import VibbeCoins from "@/assets/Vibbe_Coins.png";
+import VibbeWhite from "@/assets/Vibbe_White_text_logo1.png";
 import React from "react";
 
 /**
@@ -33,7 +33,7 @@ const CryptoRewards = () => {
 
           {/* Icons row */}
           <div className="flex items-center justify-between gap-4 mt-2">
-            <img src={VibbeCoins} alt="Vibbe coins" className="h-10" />
+            <img src={VibbeCoins} alt="Vibbe_Coins" className="h-10" />
             <img src={VibbeWhite} alt="Vibbe" className="h-8 opacity-90" />
           </div>
       </div>
@@ -87,7 +87,7 @@ const CryptoRewards = () => {
                 {/* Coins (bottom-left inside the card) */}
                 <img
                   src={VibbeCoins}
-                  alt="Vibbe coins"
+                  alt="Vibbe_Coins"
                   className="hidden md:block md:absolute md:left-[24px] md:bottom-[24px] h-12 md:h-14"
                   aria-hidden={false}
                 />
