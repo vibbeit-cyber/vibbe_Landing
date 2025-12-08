@@ -30,7 +30,7 @@ const PrivacyFeatures = () => {
           "
         >
           Your New Social Network <br />
-          Built for Privacybun
+          Built for Privacy
         </h2>
 
         {/* Features Grid */}

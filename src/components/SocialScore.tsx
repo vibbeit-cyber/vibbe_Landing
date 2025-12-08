@@ -101,7 +101,7 @@ const SocialScore = () => {
               mb-[2.5rem]
             "
           >
-            Maintain your <span className="vibbe-text">Social Score</span>
+            Maintain Your <span className="vibbe-text">Social Score</span>
             <br />
             to Boost Account Reach
           </h2>
