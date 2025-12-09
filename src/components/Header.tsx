@@ -6,7 +6,7 @@ const Header = () => {
       <div className="py-2 px-6 md:px-12 border-b border-foreground/10">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center">
-            <img src={LogoBlack} alt="Vibbe" className="h-15" />
+            <img src={LogoBlack} alt="Vibbe" className="h-12" />
           </div>
 
           <div>
