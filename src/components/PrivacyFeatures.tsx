@@ -19,14 +19,13 @@ const PrivacyFeatures = () => {
 
   return (
     <section className="w-full bg-background py-16 md:py-24">
-      <div className="max-w-8xl mx-auto px-4 md:px-8">
-
-        {/* ClickUp container */}
+      <div className="px-4 md:px-8">
+        {/* Pink container */}
         <div
           className="
+            max-w-7xl mx-auto
             rounded-[2.5rem]
             bg-gradient-to-r from-[#FF4D6D] to-[#DD2D4A]
-            bg-[#050509]
             text-white
             border border-white/10
             shadow-2xl
@@ -35,12 +34,10 @@ const PrivacyFeatures = () => {
         >
           {/* MOBILE */}
           <div className="block md:hidden">
-            
             <h2
               className="
                 font-bold leading-tight
                 text-[2rem] sm:text-[2.2rem]
-                
                 mb-8 sm:mb-10
               "
             >
@@ -49,7 +46,7 @@ const PrivacyFeatures = () => {
             </h2>
 
             <div className="grid grid-cols-1 gap-6">
-              {features.map((f,i)=>(
+              {features.map((f, i) => (
                 <div
                   key={i}
                   className="
@@ -93,7 +90,7 @@ const PrivacyFeatures = () => {
             </h2>
 
             <div className="grid grid-cols-3 gap-8 md:gap-10 lg:gap-14">
-              {features.map((f,i)=>(
+              {features.map((f, i) => (
                 <div
                   key={i}
                   className="
@@ -121,7 +118,6 @@ const PrivacyFeatures = () => {
               ))}
             </div>
           </div>
-
         </div>
       </div>
     </section>

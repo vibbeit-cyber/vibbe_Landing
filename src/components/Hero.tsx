@@ -24,7 +24,7 @@ const Hero = () => {
             <img
               src={VibbePink}
               alt="VibbePink"
-              className="inline-block h-[2.5rem] align-middle"
+              className="inline-block h-[2.5rem] align-topment-baseline mb-1"
             />
           </h1>
 
