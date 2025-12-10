@@ -3,7 +3,7 @@ const PrivacyFeatures = () => {
     {
       title: "Stay Discreet <br /> follow anonymous",
       description:
-        "Blind date on Vibbe, lets you chat <br /> with anonymous. You can chat <br /> with random strangers without the <br /> pressure of revealing your identity.",
+        "Blind date on Vibbe lets you chat <br /> with anonymous. You can chat <br /> with random strangers without the <br /> pressure of revealing your identity.",
     },
     {
       title: "One Login <br /> Multiple Alter-Ego's",
@@ -18,60 +18,110 @@ const PrivacyFeatures = () => {
   ];
 
   return (
-    <section className="w-full py-16 sm:py-20 md:py-28 px-6 md:px-10 lg:px-20">
-      <div className="max-w-7xl mx-auto">
+    <section className="w-full bg-background py-16 md:py-24">
+      <div className="max-w-8xl mx-auto px-4 md:px-8">
 
-        {/* Heading */}
-        <h2
-          className="
-            font-bold leading-tight
-            text-[2rem] sm:text-[2.5rem] md:text-[3rem]
-            mb-10 sm:mb-12
-          "
-        >
-          Your New Social Network <br />
-          Built for Privacy
-        </h2>
-
-        {/* Features Grid */}
+        {/* ClickUp container */}
         <div
           className="
-            grid grid-cols-1 
-            sm:grid-cols-2 
-            md:grid-cols-3 
-            gap-8 sm:gap-10 md:gap-14
+            rounded-[2.5rem]
+            bg-gradient-to-r from-[#FF4D6D] to-[#DD2D4A]
+            bg-[#050509]
+            text-white
+            border border-white/10
+            shadow-2xl
+            px-6 py-12 md:px-12 md:py-20
           "
         >
-          {features.map((feature, index) => (
-            <div
-              key={index}
+          {/* MOBILE */}
+          <div className="block md:hidden">
+            
+            <h2
               className="
-                bg-white border border-gray-200 rounded-3xl
-                p-6 sm:p-7 md:p-8 lg:p-10
-                hover:shadow-md transition-shadow duration-200
-                space-y-3
+                font-bold leading-tight
+                text-[2rem] sm:text-[2.2rem]
+                
+                mb-8 sm:mb-10
               "
             >
-              {/* Title (support HTML line breaks) */}
-              <h3
-                className="
-                  font-semibold
-                  text-[1.125rem] md:text-[1.25rem] leading-snug
-                "
-                dangerouslySetInnerHTML={{ __html: feature.title }}
-              />
+              Your New Social Network <br />
+              Built for Privacy
+            </h2>
 
-              {/* Description (support HTML line breaks) */}
-              <p
-                className="
-                  text-[0.95rem] md:text-[1rem]
-                  text-foreground/70 
-                  leading-relaxed
-                "
-                dangerouslySetInnerHTML={{ __html: feature.description }}
-              />
+            <div className="grid grid-cols-1 gap-6">
+              {features.map((f,i)=>(
+                <div
+                  key={i}
+                  className="
+                    bg-white/10 border border-white/20 rounded-3xl
+                    p-6 sm:p-7 hover:shadow-lg transition
+                    space-y-3
+                  "
+                >
+                  <h3
+                    className="
+                      font-semibold
+                      text-[1.05rem] leading-snug
+                    "
+                    dangerouslySetInnerHTML={{ __html: f.title }}
+                  />
+
+                  <p
+                    className="
+                      text-[0.95rem]
+                      text-white/70
+                      leading-relaxed
+                    "
+                    dangerouslySetInnerHTML={{ __html: f.description }}
+                  />
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* DESKTOP */}
+          <div className="hidden md:block">
+            <h2
+              className="
+                font-bold leading-tight
+                text-[2.5rem] md:text-[3rem]
+                mb-10 md:mb-12
+              "
+            >
+              Your New Social Network <br />
+              Built for Privacy
+            </h2>
+
+            <div className="grid grid-cols-3 gap-8 md:gap-10 lg:gap-14">
+              {features.map((f,i)=>(
+                <div
+                  key={i}
+                  className="
+                    bg-white/10 border border-white/20 rounded-3xl
+                    p-8 lg:p-10 hover:shadow-lg transition
+                    space-y-3
+                  "
+                >
+                  <h3
+                    className="
+                      font-semibold
+                      text-[1.25rem] leading-snug
+                    "
+                    dangerouslySetInnerHTML={{ __html: f.title }}
+                  />
+
+                  <p
+                    className="
+                      text-[1rem]
+                      text-white/70 leading-relaxed
+                    "
+                    dangerouslySetInnerHTML={{ __html: f.description }}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

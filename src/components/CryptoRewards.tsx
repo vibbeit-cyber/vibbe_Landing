@@ -21,7 +21,6 @@ const CryptoRewardsMobile = () => {
 
         {/* Dark inner card */}
         <div className="bg-[#1E1E1E] rounded-2xl p-6">
-
           {/* Body text */}
           <p className="text-[1rem] leading-relaxed text-white/90">
             Build on Blockchain, Vibbe rewards all users in Vibbe Tokens which
@@ -76,11 +75,12 @@ const CryptoRewardsDesktop = () => {
           >
             <div className="relative w-full h-full md:p-0 md:pl-0 md:pr-0">
 
-              {/* Paragraph block */}
+              {/* Paragraph */}
               <div className="w-full md:w-[360px] md:absolute md:left-[32px] md:top-[32px]">
                 <p className="text-base md:text-lg leading-relaxed text-white/90">
-                  Build on Blockchain, Vibbe rewards all users in Vibbe Tokens which
-                  could be converted to Crypto-coins on your preferred crypto wallet.
+                  Build on Blockchain, Vibbe rewards all users in Vibbe Tokens
+                  which could be converted to Crypto-coins on your preferred
+                  crypto wallet.
                 </p>
               </div>
 
@@ -101,7 +101,7 @@ const CryptoRewardsDesktop = () => {
           </div>
         </div>
 
-        {/* Spacer to avoid overlap */}
+        {/* Spacer */}
         <div className="hidden md:block md:h-[560px]" />
       </div>
     </div>
@@ -110,16 +110,31 @@ const CryptoRewardsDesktop = () => {
 
 const CryptoRewards = () => {
   return (
-    <section className="relative w-full bg-[hsl(var(--dark-section))] text-white">
+    <section className="w-full bg-background py-16 md:py-24 pb-16 md:px-2 md:pt-6 ">
+      <div className="max-w-8xl mx-auto px-4 md:px-8">
 
-      {/* MOBILE ONLY */}
-      <div className="block md:hidden">
-        <CryptoRewardsMobile />
-      </div>
+        {/* ClickUp-style card */}
+        <div
+          className="
+            rounded-[2.5rem]
+            bg-[#050509]
+            text-white
+            shadow-2xl
+            border border-white/10
+            px-6 py-10 md:px-12 md:py-16
+          "
+        >
+          {/* MOBILE ONLY */}
+          <div className="block md:hidden">
+            <CryptoRewardsMobile />
+          </div>
 
-      {/* DESKTOP ONLY */}
-      <div className="hidden md:block">
-        <CryptoRewardsDesktop />
+          {/* DESKTOP ONLY */}
+          <div className="hidden md:block">
+            <CryptoRewardsDesktop />
+          </div>
+        </div>
+
       </div>
     </section>
   );
