@@ -23,14 +23,14 @@ async def send_welcome_email(email: EmailStr):
     unsubscribe_link = f"http://127.0.0.1:8000/unsubscribe?email={email}"
 
     message = MessageSchema(
-        subject="Welcome to Vibbe Social Beta!",
+        subject="Welcome to Vibbe!",
         recipients=[email],
         subtype=MessageType.html,
         template_body={"unsubscribe_link": unsubscribe_link},
         attachments=[
             {
-                "file": "static/images/vibbe_logo.png",
-                "headers": {"Content-ID": "<vibbe_logo>"},
+                "file": "static/images/vibbe_pink_text_logo.png",
+                "headers": {"Content-ID": "<vibbe_pink_text_logo>"},
             }
         ]
     )
