@@ -1,5 +1,10 @@
 {
     "version": 2,
+    "functions": {
+        "api/index.py": {
+          "runtime": "python3"
+        }
+      },
     "builds": [
       { "src": "api/index.py", "use": "@vercel/python" },
       { "src": "vite.config.js", "use": "@vercel/static-build", "config": {} }
