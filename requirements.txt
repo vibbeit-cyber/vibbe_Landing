@@ -4,5 +4,7 @@ python-dotenv
 sqlalchemy
 pydantic
 mysql-connector-python
-pip
-python3 
+mangum
+fastapi-mailgit add .
+git commit -m "fixed requirements for vercel"
+git push
