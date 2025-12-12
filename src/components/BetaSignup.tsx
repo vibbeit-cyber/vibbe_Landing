@@ -6,11 +6,34 @@ import { useState } from "react";
 const BetaSignup = () => {
   const [email, setEmail] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Beta signup:", email);
+  
+    if (!email) return;
+  
+    try {
+      const res = await fetch("http://127.0.0.1:8000/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+  
+      const data = await res.json();
+  
+      if (res.ok) {
+        console.log("SUCCESS:", data);
+        alert("Thank you for signing up! 🎉");
+  
+        setEmail(""); // clear input
+      } else {
+        console.error("ERROR:", data);
+        alert("Email already registered or failed.");
+      }
+    } catch (error) {
+      console.error("NETWORK ERROR:", error);
+      alert("Unable to connect to server.");
+    }
   };
-
   return (
     <section className="w-full py-16 sm:py-20 md:py-28 px-6 md:px-10 lg:px-20">
       <div className="max-w-7xl mx-auto">
