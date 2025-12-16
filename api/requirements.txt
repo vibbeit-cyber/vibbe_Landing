@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+python-dotenv
+sqlalchemy
+pydantic
+mysql-connector-python
+fastapi-mailgit add .
+jinja2
+email-validator

@@ -1,0 +1,13 @@
+{
+  "name": "vibbe_frontend",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.x",
+    "react-dom": "^18.x"
+  }
+}
