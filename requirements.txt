@@ -4,6 +4,6 @@ python-dotenv
 sqlalchemy
 pydantic
 mysql-connector-python
-fastapi-mailgit add .
+fastapi
 jinja2
 email-validator
