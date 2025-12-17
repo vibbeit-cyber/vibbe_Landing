@@ -1,8 +1,8 @@
 from fastapi import FastAPI, HTTPException, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, EmailStr
-from .email_config import send_welcome_email
-from .database import connect_db
+from email_config import send_welcome_email
+from database import connect_db
 from dotenv import load_dotenv
 
 load_dotenv()
